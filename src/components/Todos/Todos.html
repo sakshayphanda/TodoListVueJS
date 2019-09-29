@@ -1,0 +1,5 @@
+<div>
+    <div v-for="todo in todosList" v-bind:class="{'isCompleted': todo.isCompleted}">
+        <input type="checkbox" v-on:change="checked(todo)">
+            {{todo.name}}</div>
+</div>

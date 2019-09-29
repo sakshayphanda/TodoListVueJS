@@ -1,9 +1,8 @@
 <template src="./App.html"> </template>
-<style src="./App.sass"> </style>
+<style src="./global.css"> </style>
 
 <script lang="ts">
 export default {
-  
+
 }
 </script>
-<!-- Used for global styling -->
