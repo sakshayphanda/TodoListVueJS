@@ -8,7 +8,7 @@ export default {
     props: ['todosList'],
     methods: {
         checked(todo) {
-            todo.isCompleted = !todo.isCompleted;
+            todo.completed = !todo.completed;
 
             console.log(todo);
         }

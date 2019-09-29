@@ -1,5 +1,8 @@
 <div>
-    <div v-for="todo in todosList" v-bind:class="{'isCompleted': todo.isCompleted}">
-        <input type="checkbox" v-on:change="checked(todo)">
-            {{todo.name}}</div>
+    <div v-for="todo in todosList"  class="container">
+        <input type="checkbox" v-on:change="checked(todo)" :checked="todo.completed">
+         <h5 :class="{'isCompleted': todo.completed}">{{todo.title}} </h5>
+            <button @click="$emit('delete-item', todo.id)">Delete</button>    
+    </div>
+
 </div>

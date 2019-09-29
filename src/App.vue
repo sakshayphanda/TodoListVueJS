@@ -5,4 +5,11 @@
 export default {
 
 }
+
+/**
+ * SOme tips
+ * 
+ * 'v-bind:variable' is equal to ':variable'
+ * 'v-on:click' is equal to '@click'
+*/
 </script>
