@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <Todos @delete-item="deleteItem($event)" v-bind:todosList="todosList"/>
+    <Todos @addItem = "addItem($event)" @delete-item="deleteItem($event)" v-bind:todosList="todosList"/>
   </div>
 </template>
 
@@ -25,10 +25,13 @@ export default {
       this.todosList = this.todosList.filter(
         item => item.id !== id
       );
+    }, 
+    addItem(item) {
+      this.todosList = [...this.todosList, item]
     }
   },
   created() {
-    axios.get('https://jsonplaceholder.typicode.com/todos').then(
+    axios.get('https://jsonplaceholder.typicode.com/todos?_limit=5').then(
       response => {
         console.log(response);
         this.todosList = response.data

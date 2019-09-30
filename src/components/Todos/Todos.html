@@ -1,4 +1,8 @@
 <div>
+    <div>
+        <input type="text" placeholder="Add a todo" @change="addItem($event.target.value)">
+        <button @click="addTodo()">Add</button>
+    </div>
     <div v-for="todo in todosList"  class="container">
         <input type="checkbox" v-on:change="checked(todo)" :checked="todo.completed">
          <h5 :class="{'isCompleted': todo.completed}">{{todo.title}} </h5>
